@@ -3,10 +3,85 @@
   "name": "nx-plugin",
   "version": "0.0.1",
   "generators": {
-    "nx-plugin": {
-      "factory": "./src/generators/nx-plugin/generator",
-      "schema": "./src/generators/nx-plugin/schema.json",
-      "description": "nx-plugin generator"
+    "application": {
+      "factory": "./src/generators/application/generator",
+      "schema": "./src/generators/application/schema.json",
+      "description": "react application generator"
+    },
+    "react-component-library": {
+      "factory": "./src/generators/react-component-library/generator",
+      "schema": "./src/generators/react-component-library/schema.json",
+      "description": "react-component-library generator"
+    },
+    "component-story": {
+      "factory": "./src/generators/component-story/generator",
+      "schema": "./src/generators/component-story/schema.json",
+      "description": "component-story generator"
+    },
+    "component-test": {
+      "factory": "./src/generators/component-test/generator",
+      "schema": "./src/generators/component-test/schema.json",
+      "description": "component-test generator"
+    },
+    "component": {
+      "factory": "./src/generators/component/generator",
+      "schema": "./src/generators/component/schema.json",
+      "description": "component generator"
+    },
+    "cypress-component-configuration": {
+      "factory": "./src/generators/cypress-component-configuration/generator",
+      "schema": "./src/generators/cypress-component-configuration/schema.json",
+      "description": "cypress-component-configuration generator"
+    },
+    "hook": {
+      "factory": "./src/generators/hook/generator",
+      "schema": "./src/generators/hook/schema.json",
+      "description": "hook generator"
+    },
+    "host": {
+      "factory": "./src/generators/host/generator",
+      "schema": "./src/generators/host/schema.json",
+      "description": "host generator"
+    },
+    "remote": {
+      "factory": "./src/generators/remote/generator",
+      "schema": "./src/generators/remote/schema.json",
+      "description": "remote generator"
+    },
+    "init": {
+      "factory": "./src/generators/init/generator",
+      "schema": "./src/generators/init/schema.json",
+      "description": "init generator"
+    },
+    "library": {
+      "factory": "./src/generators/library/generator",
+      "schema": "./src/generators/library/schema.json",
+      "description": "library generator"
+    },
+    "redux": {
+      "factory": "./src/generators/redux/generator",
+      "schema": "./src/generators/redux/schema.json",
+      "description": "redux generator"
+    },
+    "setup-ssr": {
+      "factory": "./src/generators/setup-ssr/generator",
+      "schema": "./src/generators/setup-ssr/schema.json",
+      "description": "setup-ssr generator"
+    },
+    "setup-tailwind": {
+      "factory": "./src/generators/setup-tailwind/generator",
+      "schema": "./src/generators/setup-tailwind/schema.json",
+      "description": "setup-tailwind generator"
+    },
+    "stories": {
+      "factory": "./src/generators/stories/generator",
+      "schema": "./src/generators/stories/schema.json",
+      "description": "stories generator"
+    },
+    "storybook-configuration": {
+      "factory": "./src/generators/storybook-configuration/generator",
+      "schema": "./src/generators/storybook-configuration/schema.json",
+      "description": "storybook-configuration generator"
     }
   }
 }

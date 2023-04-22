@@ -1,0 +1,16 @@
+{
+  "name": "eslint",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "/src",
+  "projectType": "library",
+  "targets": {
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "node tools/scripts/publish.mjs eslint {args.ver} {args.tag}"
+      },
+      "dependsOn": ["build"]
+    }
+  },
+  "tags": []
+}
