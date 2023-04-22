@@ -1,4 +1,11 @@
 {
   "root": true,
-  "extends": ["@zenithal/eslint-config"]
+  "extends": ["@zenithal/eslint-config"],
+  "overrides": [
+    {
+      "files": "*.json",
+      "parser": "jsonc-eslint-parser",
+      "rules": {}
+    }
+  ]
 }

@@ -17,7 +17,8 @@
     "paths": {
       "@zenithal/eslint-config": ["packages/eslint-config/src/index.ts"],
       "@zenithal/nx-plugin": ["packages/nx-plugin/src/index.ts"],
-      "@zenithal/prettier-config": ["packages/prettier-config/src/index.ts"]
+      "@zenithal/prettier-config": ["packages/prettier-config/src/index.ts"],
+      "@zenithal/test": ["packages/test/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

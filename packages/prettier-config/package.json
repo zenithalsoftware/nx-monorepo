@@ -1,5 +1,10 @@
 {
   "name": "@zenithal/prettier-config",
   "version": "0.0.1",
-  "main": "index.js"
+  "main": "index.json",
+  "files": [
+    "index.json",
+    "README.md",
+    "package.json"
+  ]
 }
