@@ -18,7 +18,16 @@
       "@zenithal/eslint-config": ["packages/eslint-config/src/index.ts"],
       "@zenithal/nx-plugin": ["packages/nx-plugin/src/index.ts"],
       "@zenithal/prettier-config": ["packages/prettier-config/src/index.ts"],
-      "@zenithal/test": ["packages/test/src/index.ts"]
+      "@zenithal/test": ["packages/test/src/index.ts"],
+      "@zenithal/test-component-library": [
+        "packages/test-component-library/src/index.ts"
+      ],
+      "@zenithal/test-component-library-2": [
+        "packages/test-component-library-2/src/index.ts"
+      ],
+      "@zenithal/test-component-library-3": [
+        "packages/test-component-library-3/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

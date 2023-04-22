@@ -1,5 +1,5 @@
 import {
-  addProjectConfiguration,
+  addDependenciesToPackageJson,
   formatFiles,
   generateFiles,
   getWorkspaceLayout,
@@ -7,20 +7,19 @@ import {
   offsetFromRoot,
   Tree,
 } from '@nrwl/devkit';
+import { Linter } from '@nrwl/linter';
+import { libraryGenerator } from '@nrwl/react';
 import * as path from 'path';
-import { ReactComponentLibraryGeneratorSchema } from './schema';
+import { Schema } from './schema';
 
-interface NormalizedSchema extends ReactComponentLibraryGeneratorSchema {
+interface NormalizedSchema extends Schema {
   projectName: string;
   projectRoot: string;
   projectDirectory: string;
   parsedTags: string[];
 }
 
-function normalizeOptions(
-  tree: Tree,
-  options: ReactComponentLibraryGeneratorSchema
-): NormalizedSchema {
+function normalizeOptions(tree: Tree, options: Schema): NormalizedSchema {
   const name = names(options.name).fileName;
   const projectDirectory = options.directory
     ? `${names(options.directory).fileName}/${name}`
@@ -55,22 +54,34 @@ function addFiles(tree: Tree, options: NormalizedSchema) {
   );
 }
 
-export default async function (
-  tree: Tree,
-  options: ReactComponentLibraryGeneratorSchema
-) {
+export default async function (tree: Tree, options: Schema) {
   const normalizedOptions = normalizeOptions(tree, options);
-  addProjectConfiguration(tree, normalizedOptions.projectName, {
-    root: normalizedOptions.projectRoot,
-    projectType: 'library',
-    sourceRoot: `${normalizedOptions.projectRoot}/src`,
-    targets: {
-      build: {
-        executor: '@zenithal/nx-plugin:build',
-      },
-    },
-    tags: normalizedOptions.parsedTags,
+
+  await libraryGenerator(tree, {
+    ...options,
+    style: 'styled-components',
+    bundler: 'rollup',
+    linter: Linter.EsLint,
+    unitTestRunner: 'jest',
+    routing: false,
+    js: false,
+    globalCss: false,
+    pascalCaseFiles: false,
   });
+
+  addDependenciesToPackageJson(
+    tree,
+    {
+      '@mui/icons-material': '^5.11.11',
+      '@mui/material': '^5.11.11',
+      '@mui/x-data-grid': '^6.0.0',
+      react: '^18.2.0',
+      'react-router-dom': '^6.8.2',
+      'styled-components': '^5.3.6',
+    },
+    {}
+  );
+
   addFiles(tree, normalizedOptions);
   await formatFiles(tree);
 }
