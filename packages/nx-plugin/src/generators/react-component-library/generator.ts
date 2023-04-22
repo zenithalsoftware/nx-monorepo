@@ -3,6 +3,7 @@ import {
   formatFiles,
   generateFiles,
   getWorkspaceLayout,
+  installPackagesTask,
   names,
   offsetFromRoot,
   Tree,
@@ -69,6 +70,8 @@ export default async function (tree: Tree, options: Schema) {
     pascalCaseFiles: false,
   });
 
+  addFiles(tree, normalizedOptions);
+
   addDependenciesToPackageJson(
     tree,
     {
@@ -79,9 +82,10 @@ export default async function (tree: Tree, options: Schema) {
       'react-router-dom': '^6.8.2',
       'styled-components': '^5.3.6',
     },
-    {}
+    {},
+    './package.json'
   );
 
-  addFiles(tree, normalizedOptions);
+  installPackagesTask(tree);
   await formatFiles(tree);
 }
