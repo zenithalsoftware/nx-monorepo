@@ -5,11 +5,12 @@
     "declaration": true,
     "types": ["node"]
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "!src/**/files/**/*"],
   "exclude": [
     "jest.config.ts",
     "src/**/*.spec.ts",
     "src/**/*.test.ts",
-    "src/**/files/**/index.ts__template__"
+    "src/**/files/src/**/*.ts",
+    "src/**/files/src/**/*.ts__template__"
   ]
 }
