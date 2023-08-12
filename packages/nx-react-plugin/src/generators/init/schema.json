@@ -3,7 +3,6 @@
   "$id": "NxReactNgInit",
   "title": "Init React Plugin",
   "description": "Initialize a React Plugin.",
-  "cli": "nx",
   "type": "object",
   "properties": {
     "unitTestRunner": {

@@ -1,5 +1,5 @@
-import { Tree } from '@nrwl/devkit';
-import { hookGenerator } from '@nrwl/react';
+import { Tree } from '@nx/devkit';
+import { hookGenerator } from '@nx/react';
 import { Schema } from './schema';
 
 export default async function (tree: Tree, options: Schema) {

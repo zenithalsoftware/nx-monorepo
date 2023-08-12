@@ -1,0 +1,64 @@
+{
+  "name": "clean-architecture",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "e2e/clean-architecture/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/e2e/clean-architecture",
+        "main": "e2e/clean-architecture/src/main.ts",
+        "tsConfig": "e2e/clean-architecture/tsconfig.app.json",
+        "assets": ["e2e/clean-architecture/src/assets"],
+        "isolatedConfig": true,
+        "webpackConfig": "e2e/clean-architecture/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "clean-architecture:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "clean-architecture:build:development"
+        },
+        "production": {
+          "buildTarget": "clean-architecture:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["e2e/clean-architecture/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "e2e/clean-architecture/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}

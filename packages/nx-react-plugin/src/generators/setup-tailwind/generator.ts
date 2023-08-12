@@ -1,5 +1,5 @@
-import { Tree } from '@nrwl/devkit';
-import { setupTailwindGenerator } from '@nrwl/react';
+import { Tree } from '@nx/devkit';
+import { setupTailwindGenerator } from '@nx/react';
 import { SetupTailwindOptions } from './schema';
 
 export default async function (tree: Tree, options: SetupTailwindOptions) {

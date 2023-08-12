@@ -1,7 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
   "$id": "GeneratorReactRemote",
-  "cli": "nx",
   "title": "Generate Module Federation Setup for React Remote App",
   "description": "Create Module Federation configuration files for given React Remote Application.",
   "type": "object",

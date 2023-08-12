@@ -1,5 +1,5 @@
-import { Tree } from '@nrwl/devkit';
-import { cypressComponentConfigGenerator } from '@nrwl/react';
+import { Tree } from '@nx/devkit';
+import { cypressComponentConfigGenerator } from '@nx/react';
 import { CypressComponentConfigurationSchema } from './schema';
 
 export default async function (

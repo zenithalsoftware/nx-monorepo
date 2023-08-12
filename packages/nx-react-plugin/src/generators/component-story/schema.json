@@ -1,6 +1,5 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "cli": "nx",
   "$id": "NxReactComponentStory",
   "title": "Create component story",
   "description": "Generate storybook story for a react component.",

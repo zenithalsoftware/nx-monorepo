@@ -1,6 +1,5 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "cli": "nx",
   "$id": "NxReactComponent",
   "title": "Create a React Component",
   "description": "Create a React Component for Nx.",

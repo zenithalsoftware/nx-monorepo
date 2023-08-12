@@ -1,7 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
   "$id": "GeneratorReactHost",
-  "cli": "nx",
   "title": "Generate Module Federation Setup for React Host App",
   "description": "Create Module Federation configuration files for given React Host Application.",
   "type": "object",

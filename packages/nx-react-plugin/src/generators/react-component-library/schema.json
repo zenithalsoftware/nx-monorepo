@@ -1,6 +1,5 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "cli": "nx",
   "$id": "NxReactComponentLibrary",
   "title": "Create a React Component Library",
   "description": "Create a React Component Library for an Nx workspace.",

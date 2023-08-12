@@ -1,5 +1,5 @@
-import { componentStoryGenerator } from '@nrwl/react';
-import { Tree } from '@nrwl/devkit';
+import { componentStoryGenerator } from '@nx/react';
+import { Tree } from '@nx/devkit';
 import { ComponentStoryGeneratorSchema } from './schema';
 
 export default async function (

@@ -7,9 +7,9 @@ import {
   names,
   offsetFromRoot,
   Tree,
-} from '@nrwl/devkit';
-import { Linter } from '@nrwl/linter';
-import { libraryGenerator } from '@nrwl/react';
+} from '@nx/devkit';
+import { Linter } from '@nx/linter';
+import { libraryGenerator } from '@nx/react';
 import * as path from 'path';
 import { Schema } from './schema';
 

@@ -1,6 +1,5 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "cli": "nx",
   "$id": "NxReactHook",
   "title": "Create a React Hook for Nx",
   "description": "Create a React component using Hooks in a dedicated React project.",
