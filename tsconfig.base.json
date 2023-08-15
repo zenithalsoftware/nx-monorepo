@@ -15,7 +15,17 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@zenithal/endpoints": ["packages/endpoints/src/index.ts"],
       "@zenithal/eslint-config": ["packages/eslint-config/src/index.ts"],
+      "@zenithal/lone-fiddler/core": [
+        "packages/lone-fiddler/core/src/index.ts"
+      ],
+      "@zenithal/lone-fiddler/infrastructure": [
+        "packages/lone-fiddler/infrastructure/src/index.ts"
+      ],
+      "@zenithal/lone-fiddler/shared": [
+        "packages/lone-fiddler/shared/src/index.ts"
+      ],
       "@zenithal/prettier-config": ["packages/prettier-config/src/index.ts"],
       "@zenithal/react": ["packages/nx-react-plugin/src/index.ts"],
       "@zenithal/shared": ["packages/shared/src/index.ts"],
