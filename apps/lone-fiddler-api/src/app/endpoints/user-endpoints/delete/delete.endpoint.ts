@@ -1,12 +1,8 @@
-import { Controller } from '@nestjs/common';
+import { Delete } from '@zenithal/endpoints';
 import { Endpoint } from '@zenithal/lone-fiddler/shared';
 
-@Controller('user')
 export class DeleteEndpoint implements Endpoint<string, string> {
-  constructor() {
-    //
-  }
-
+  @Delete(':id')
   handle(id: string): string {
     return id;
   }
