@@ -1,6 +1,6 @@
 {
-  "name": "lone-fiddler-packages-infrastructure",
-  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "name": "lone-fiddler-infrastructure",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/lone-fiddler/packages/infrastructure/src",
   "projectType": "library",
   "targets": {

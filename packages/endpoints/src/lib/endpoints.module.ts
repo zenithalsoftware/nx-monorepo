@@ -19,19 +19,27 @@ export class EndpointsModule {
 
 class EndpointsInjectionModule {
   static async forRootAsync(path: string): Promise<DynamicModule> {
+    console.log('path: ', path);
     const endpointsPath = glob.sync(path);
     const endpointsRelativePathWithoutExtension = endpointsPath
       // Replace src, because you are probably running the code
       // from dist folder
       .map((path) => path.replace('src/', './../'))
       .map((path) => path.replace('.ts', ''));
+    console.log(
+      'endpointsRelativePathWithoutExtension: ',
+      endpointsRelativePathWithoutExtension
+    );
 
     const endpointControllers: Type<Endpoint>[] = [];
     const importedModules = await Promise.all(
-      endpointsRelativePathWithoutExtension.map(async (path) => ({
-        path,
-        endpoint: await import(path),
-      }))
+      endpointsRelativePathWithoutExtension.map(async (path) => {
+        console.debug('importing endpoint: ', path);
+        return {
+          path,
+          endpoint: await import(path),
+        };
+      })
     );
 
     importedModules.forEach((modules) => {
@@ -53,6 +61,12 @@ class EndpointsInjectionModule {
         );
       }
 
+      console.debug(
+        'initializing Controller: ',
+        path,
+        ' for endpoint: ',
+        endpoint.prototype.name
+      );
       Controller(path)(endpoint);
       endpointControllers.push(endpoint);
     });

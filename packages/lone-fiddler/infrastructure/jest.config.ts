@@ -8,5 +8,5 @@ export default {
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
   coverageDirectory:
-    '../../../../coverage/packages/lone-fiddler/packages/infrastructure',
+    '../../../coverage/packages/lone-fiddler/packages/infrastructure',
 };

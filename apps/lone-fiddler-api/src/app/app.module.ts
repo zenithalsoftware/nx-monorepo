@@ -1,7 +1,9 @@
 import { Module } from '@nestjs/common';
 import { EndpointsModule } from '@zenithal/endpoints';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { LoggerModule } from '@zenithal/logger';
+import { CreateEndpoint } from './endpoints/user-endpoints/create/create.endpoint';
+// import { LoggerModule } from '@zenithal/logger';
+// import { CreateEndpoint } from './endpoints/user-endpoints/create/create.endpoint';
 
 @Module({
   imports: [
@@ -12,8 +14,9 @@ import { AppService } from './app.service';
     // The routes are determined by a directory path-based convention,
     // but fully support setting a custom path.
     EndpointsModule.forRootAsync(),
+    LoggerModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [CreateEndpoint],
+  providers: [],
 })
 export class AppModule {}

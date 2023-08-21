@@ -19,3 +19,4 @@ export * from './lib/Sort';
 export * from './lib/SortDirection';
 export * from './lib/Specification';
 export * from './lib/WhereQueryData';
+export * from './lib/Key';

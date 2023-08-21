@@ -1,1 +1,2 @@
-export * from './lib/lone-fiddler-packages-core';
+export * from './lib/lone-fiddler-core.module';
+export * from './lib/user-aggregate';
