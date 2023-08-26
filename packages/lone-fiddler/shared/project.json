@@ -1,21 +1,21 @@
 {
-  "name": "lone-fiddler-packages-shared",
+  "name": "lone-fiddler-shared",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/lone-fiddler/packages/shared/src",
+  "sourceRoot": "packages/lone-fiddler/shared/src",
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/lone-fiddler/packages/shared/**/*.ts"]
+        "lintFilePatterns": ["packages/lone-fiddler/shared/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "packages/lone-fiddler/packages/shared/jest.config.ts",
+        "jestConfig": "packages/lone-fiddler/shared/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {

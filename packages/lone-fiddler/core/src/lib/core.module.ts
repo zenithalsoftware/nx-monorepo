@@ -6,4 +6,4 @@ import { UserModule } from './user-aggregate';
   controllers: [],
   providers: [UserModule],
 })
-export class LoneFiddlerCoreModule {}
+export class CoreModule {}

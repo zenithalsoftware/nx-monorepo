@@ -1,23 +1,21 @@
 {
   "name": "lone-fiddler-infrastructure",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/lone-fiddler/packages/infrastructure/src",
+  "sourceRoot": "packages/lone-fiddler/infrastructure/src",
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "packages/lone-fiddler/packages/infrastructure/**/*.ts"
-        ]
+        "lintFilePatterns": ["packages/lone-fiddler/infrastructure/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "packages/lone-fiddler/packages/infrastructure/jest.config.ts",
+        "jestConfig": "packages/lone-fiddler/infrastructure/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
