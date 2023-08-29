@@ -27,7 +27,7 @@
       "@zenithal/lone-fiddler/shared": [
         "packages/lone-fiddler/shared/src/index.ts"
       ],
-      "@zenithal/prettier-config": ["packages/prettier-config/src/index.ts"],
+      "@zenithal/prettier-config": ["packages/prettier-config/index.json"],
       "@zenithal/publishable": ["packages/publishable-2/src/index.ts"],
       "@zenithal/react": ["packages/nx-react-plugin/src/index.ts"],
       "@zenithal/shared": ["packages/shared/src/index.ts"],

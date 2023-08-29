@@ -11,7 +11,8 @@
   },
   "targetDefaults": {
     "build": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     },
     "lint": {
       "inputs": [
@@ -46,5 +47,10 @@
       }
     }
   },
-  "plugins": ["@nxrocks/nx-flutter"]
+  "plugins": ["@nxrocks/nx-flutter"],
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "sharedGlobals": [],
+    "production": ["default"]
+  }
 }
