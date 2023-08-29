@@ -1,6 +1,5 @@
 {
   "name": "@zenithal/specification",
-  "version": "0.0.1",
-  "type": "commonjs",
-  "private": true
+  "version": "0.0.4",
+  "type": "commonjs"
 }

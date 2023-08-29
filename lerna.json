@@ -5,6 +5,7 @@
   "packages": [
     "packages/eslint-config",
     "packages/endpoints",
-    "packages/prettier-config"
+    "packages/prettier-config",
+    "packages/specification"
   ]
 }
