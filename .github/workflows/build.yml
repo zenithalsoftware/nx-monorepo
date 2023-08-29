@@ -4,7 +4,19 @@ on:
       - main
   pull_request:
     branches:
-      - *
+      - main
+      - develop
+      - feature/*
+      - release/*
+      - hotfix/*
+      - bugfix/*
+      - chore/*
+      - refactor/*
+      - ci/*
+      - docs/*
+      - style/*
+      - test/*
+      - wip/*
 
 jobs:
   test:
