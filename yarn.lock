@@ -7795,7 +7795,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@zenithal/eslint-config@0.0.1, @zenithal/eslint-config@workspace:packages/eslint-config":
+"@zenithal/eslint-config@npm:0.0.1":
+  version: 0.0.1
+  resolution: "@zenithal/eslint-config@npm:0.0.1"
+  peerDependencies:
+    "@nrwl/nx": ^7.8.7
+  checksum: c6bea3b3131dc1b4b9825a4686d78789cb234c239984eb8842c6213cd5019500f1702bce35abea821a19cb62ebd6a3602e09b70136e7d0b2d0a4275fd35174b2
+  languageName: node
+  linkType: hard
+
+"@zenithal/eslint-config@workspace:packages/eslint-config":
   version: 0.0.0-use.local
   resolution: "@zenithal/eslint-config@workspace:packages/eslint-config"
   peerDependencies:
@@ -7821,7 +7830,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@zenithal/prettier-config@0.0.1, @zenithal/prettier-config@workspace:packages/prettier-config":
+"@zenithal/prettier-config@npm:0.0.1":
+  version: 0.0.1
+  resolution: "@zenithal/prettier-config@npm:0.0.1"
+  checksum: 6f92e44c05484d1e2e60530c803bbad11d9cb81d5880f219034c7b5cc1279b252ac267aea8c74632a84120a8ae815c3d01733a3c973ca4ce3bd4184a16c2c08f
+  languageName: node
+  linkType: hard
+
+"@zenithal/prettier-config@workspace:packages/prettier-config":
   version: 0.0.0-use.local
   resolution: "@zenithal/prettier-config@workspace:packages/prettier-config"
   languageName: unknown
