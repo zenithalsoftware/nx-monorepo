@@ -57,7 +57,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: lerna publish --no-private --yes
+      - run: yarn dlx lerna publish --no-private --yes --contents dist/packages
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 

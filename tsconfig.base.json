@@ -28,11 +28,9 @@
         "packages/lone-fiddler/shared/src/index.ts"
       ],
       "@zenithal/prettier-config": ["packages/prettier-config/index.json"],
-      "@zenithal/publishable": ["packages/publishable-2/src/index.ts"],
-      "@zenithal/react": ["packages/nx-react-plugin/src/index.ts"],
+      "@zenithal/nx-react-plugin": ["packages/nx-react-plugin/src/index.ts"],
       "@zenithal/shared": ["packages/shared/src/index.ts"],
-      "@zenithal/specification": ["packages/specification/src/index.ts"],
-      "@zenithal/test": ["packages/test/src/index.ts"]
+      "@zenithal/specification": ["packages/specification/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp", "**/files/src/**/*"]

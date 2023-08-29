@@ -1,5 +1,5 @@
 {
-  "name": "@zenithal/react",
+  "name": "@zenithal/nx-react-plugin",
   "version": "0.0.1",
   "main": "src/index.js",
   "private": true,

@@ -11,7 +11,29 @@
         "outputPath": "dist/packages/shared",
         "main": "packages/shared/src/index.ts",
         "tsConfig": "packages/shared/tsconfig.lib.json",
-        "assets": ["packages/shared/*.md"]
+        "assets": [
+          "packages/shared/*.md",
+          {
+            "input": "./packages/shared/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/shared/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/shared",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./packages/shared",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
       }
     },
     "lint": {

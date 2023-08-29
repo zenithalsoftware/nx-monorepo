@@ -4,6 +4,38 @@
   "sourceRoot": "packages/logger/src",
   "projectType": "library",
   "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/logger",
+        "main": "packages/logger/src/index.ts",
+        "tsConfig": "packages/logger/tsconfig.lib.json",
+        "assets": [
+          "packages/logger/*.md",
+          {
+            "input": "./packages/logger/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/logger/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/logger",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./packages/logger",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
