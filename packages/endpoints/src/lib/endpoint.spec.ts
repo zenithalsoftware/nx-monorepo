@@ -1,7 +1,7 @@
-import { endpoint } from './endpoint';
+import { Endpoint } from './endpoint';
 
 describe('endpoints', () => {
   it('should work', () => {
-    expect(endpoint()).toEqual('endpoints');
+    expect(Endpoint()).toEqual('endpoints');
   });
 });

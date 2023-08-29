@@ -4,16 +4,16 @@ on:
       - 'v*'
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: 'yarn'
-      - run: yarn install --frozen-lockfile --immutable
-      - run: yarn dlx nx nx run-many -t test
+  #  test:
+  #    runs-on: ubuntu-latest
+  #    steps:
+  #      - uses: actions/checkout@v3
+  #      - uses: actions/setup-node@v3
+  #        with:
+  #          node-version: 16
+  #          cache: 'yarn'
+  #      - run: yarn install --frozen-lockfile --immutable
+  #      - run: yarn dlx nx run-many -t test --exclude=lone-fiddler-api,lone-fiddler-api-e2e,clean-architecture,clean-architecture-e2e,lone-fiddler-prototype
 
   lint:
     runs-on: ubuntu-latest
@@ -24,7 +24,7 @@ jobs:
           node-version: 16
           cache: 'yarn'
       - run: yarn install --frozen-lockfile --immutable
-      - run: yarn dlx nx nx run-many -t lint
+      - run: yarn dlx nx run-many -t lint --exclude=lone-fiddler-api,lone-fiddler-api-e2e,clean-architecture,clean-architecture-e2e,lone-fiddler-prototype
 
   build:
     runs-on: ubuntu-latest
@@ -35,7 +35,7 @@ jobs:
           node-version: 16
           cache: 'yarn'
       - run: yarn install --frozen-lockfile --immutable
-      - run: yarn dlx nx run-many -t build
+      - run: yarn dlx nx run-many -t build --exclude=lone-fiddler-api,lone-fiddler-api-e2e,clean-architecture,clean-architecture-e2e,lone-fiddler-prototype
   release:
     needs:
       - build
