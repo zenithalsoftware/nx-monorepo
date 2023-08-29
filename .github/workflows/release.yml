@@ -13,7 +13,7 @@ jobs:
           node-version: 16
           cache: 'yarn'
       - run: yarn install --frozen-lockfile --immutable
-      - run: yarn dlx nx affected -t test
+      - run: yarn dlx nx nx run-many -t test
 
   lint:
     runs-on: ubuntu-latest
@@ -24,7 +24,7 @@ jobs:
           node-version: 16
           cache: 'yarn'
       - run: yarn install --frozen-lockfile --immutable
-      - run: yarn dlx nx affected -t lint
+      - run: yarn dlx nx nx run-many -t lint
 
   build:
     runs-on: ubuntu-latest
@@ -35,9 +35,12 @@ jobs:
           node-version: 16
           cache: 'yarn'
       - run: yarn install --frozen-lockfile --immutable
-      - run: yarn dlx nx affected -t build
+      - run: yarn dlx nx run-many -t build
   release:
-    needs: build
+    needs:
+      - build
+      - test
+      - lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
