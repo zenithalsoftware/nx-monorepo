@@ -9,7 +9,7 @@ jobs:
         with:
           node-version: 16
       - run: yarn
-      - run: nx affected -t test
+      - run: yarn dlx nx affected -t test
 
   lint:
     runs-on: ubuntu-latest
@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 16
       - run: yarn
-      - run: nx affected -t lint
+      - run: yarn dlx nx affected -t lint
 
   build:
     runs-on: ubuntu-latest
@@ -29,4 +29,4 @@ jobs:
         with:
           node-version: 16
       - run: yarn
-      - run: nx affected -t build
+      - run: yarn dlx nx affected -t build
