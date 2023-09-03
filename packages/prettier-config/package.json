@@ -1,6 +1,6 @@
 {
   "name": "@zenithal/prettier-config",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "main": "index.json",
   "files": [
     "index.json",
