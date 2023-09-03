@@ -27,8 +27,13 @@
       "@zenithal/lone-fiddler/shared": [
         "packages/lone-fiddler/shared/src/index.ts"
       ],
-      "@zenithal/prettier-config": ["packages/prettier-config/index.json"],
+      "@zenithal/nx": ["packages/nx/src/index.ts"],
+      "@zenithal/nx-flutter": ["packages/nx-flutter/src/index.ts"],
+      "@zenithal/nx-plugin": ["packages/nx-plugin/src/index.ts"],
+      "@zenithal/nx-ra": ["packages/nx-ra/src/index.ts"],
+      "@zenithal/nx-ra-plugin": ["packages/nx-ra-plugin/src/index.ts"],
       "@zenithal/nx-react-plugin": ["packages/nx-react-plugin/src/index.ts"],
+      "@zenithal/prettier-config": ["packages/prettier-config/index.json"],
       "@zenithal/shared": ["packages/shared/src/index.ts"],
       "@zenithal/specification": ["packages/specification/src/index.ts"]
     }
