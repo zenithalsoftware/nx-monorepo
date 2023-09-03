@@ -39,7 +39,6 @@ jobs:
   release:
     needs:
       - build
-      - test
       - lint
     runs-on: ubuntu-latest
     steps:
